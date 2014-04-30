@@ -1,7 +1,7 @@
-node-wakame
+node-searcher
 ===========
 
-searcher for Node.js
+TF-IDF Searcher for Node.js
 
 [![Build Status](https://secure.travis-ci.org/exabugs/node-searcher.png?branch=master)](http://travis-ci.org/exabugs/node-searcher)
 [![Coverage Status](https://coveralls.io/repos/exabugs/node-searcher/badge.png?branch=master)](https://coveralls.io/r/exabugs/node-searcher?branch=master)
