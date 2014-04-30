@@ -36,7 +36,10 @@
         <entry file="file://$PROJECT_DIR$/test/vector/index_test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="86" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1425">
-              <folding />
+              <folding>
+                <marker date="1398847369000" expanded="true" signature="586:1276" placeholder="{...}" />
+                <marker date="1398847369000" expanded="true" signature="1312:1692" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,6 +48,24 @@
         <entry file="file://$PROJECT_DIR$/test/text/index_test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="23" selection-start="365" selection-end="365" vertical-scroll-proportion="0.51903117" vertical-offset="0" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_util.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="1" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -68,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/text/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="0.25647667" vertical-offset="21" max-vertical-offset="3540">
+            <state line="10" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-3.8076923" vertical-offset="21" max-vertical-offset="3540">
               <folding />
             </state>
           </provider>
@@ -81,24 +102,6 @@
         <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/mongodb/mongo_client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="166" column="0" selection-start="7579" selection-end="7579" vertical-scroll-proportion="0.0" vertical-offset="2387" max-vertical-offset="6660">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".npmignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.npmignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -125,9 +128,10 @@
       <list>
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/vector/index_test.js" />
         <option value="$PROJECT_DIR$/lib/text/index.js" />
+        <option value="$PROJECT_DIR$/.coveralls.yml" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -135,8 +139,8 @@
     <data>$PROJECT_DIR$/node_modules/mocha</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="421" />
-    <option name="y" value="24" />
+    <option name="x" value="-26" />
+    <option name="y" value="22" />
     <option name="width" value="1366" />
     <option name="height" value="742" />
   </component>
@@ -249,20 +253,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="extend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-searcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node-searcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,11 +468,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="421" y="24" width="1366" height="742" extended-state="0" />
-    <editor active="false" />
+    <frame x="-26" y="22" width="1366" height="742" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25801283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39583334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -589,20 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.coveralls.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
@@ -645,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-9.166667" vertical-offset="440" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/mongodb/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="10" selection-start="2944" selection-end="2944" vertical-scroll-proportion="0.0" vertical-offset="1527" max-vertical-offset="4080">
@@ -676,7 +645,10 @@
     <entry file="file://$PROJECT_DIR$/test/vector/index_test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1425">
-          <folding />
+          <folding>
+            <marker date="1398847369000" expanded="true" signature="586:1276" placeholder="{...}" />
+            <marker date="1398847369000" expanded="true" signature="1312:1692" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,7 +675,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/text/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="0.25647667" vertical-offset="21" max-vertical-offset="3540">
+        <state line="10" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-3.8076923" vertical-offset="21" max-vertical-offset="3540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.coveralls.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="72" selection-end="72" vertical-scroll-proportion="0.18404908" vertical-offset="0" max-vertical-offset="326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="1" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="365" selection-end="365" vertical-scroll-proportion="0.51903117" vertical-offset="0" max-vertical-offset="750">
           <folding />
         </state>
       </provider>

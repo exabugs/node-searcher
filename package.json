@@ -1,10 +1,10 @@
 {
   "name": "node-searcher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TF-IDF Searcher",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha --require blanket --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
+    "test": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha --recursive --require blanket --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
   },
   "config": {
     "blanket": {
