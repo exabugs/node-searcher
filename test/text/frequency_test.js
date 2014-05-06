@@ -170,7 +170,7 @@ describe('text.frequency', function () {
 
     var field = ['key', 'val'];
 
-    frequency.object_frequency(db, info, field, function (err, result) {
+    frequency.object_frequency(db, info, field, {}, function (err, result) {
       should.not.exist(err);
       var expected = [
         {_id: 'a', value: 0},
@@ -213,6 +213,12 @@ describe('text.frequency', function () {
 
   it('tfiof', function (done) {
 
+    var freq = {
+      'meta.tf': COLL_OF
+    };
+
+    var field = ['key', 'val', 'tfiof'];
+
     var info = {
       collection: COLL,
       attribute: 'meta.tf',
@@ -222,9 +228,7 @@ describe('text.frequency', function () {
       }
     };
 
-    var field = ['key', 'val', 'tfiof'];
-
-    frequency.object_frequency(db, info, field, function (err) {
+    frequency.object_frequency(db, info, freq, field, function (err) {
 
       var target = {
         collection: COLL,
@@ -234,11 +238,7 @@ describe('text.frequency', function () {
         }
       };
 
-      var source = {
-        collection: COLL_OF
-      };
-
-      frequency.tfiof(db, target, source, field, function (err, result) {
+      frequency.tfiof(db, target, freq, field, function (err, result) {
         should.not.exist(err);
         done();
       });
@@ -248,14 +248,26 @@ describe('text.frequency', function () {
 
   it('search', function (done) {
 
+    var freq = {
+      'meta.tf': COLL_OF
+    };
+
+    var field = ['key', 'val', 'tfiof'];
+
     var collection = db.collection(COLL);
     var collection_freq = db.collection(COLL_OF);
-    var attribute = 'meta.tf'
-    var field = ['key', 'val', 'tfiof'];
+    var attribute = 'meta.tf';
+
     var option = {
       copy: [],
       out: 'test.search.result'
     };
+
+    var condition = {
+      'meta.tf': 'a x'
+    };
+
+    //exports.search = function (collection, text, collection_df, attribute, field, option, callback) {
 
     var expected = [
       {
