@@ -115,13 +115,16 @@ describe('text.frequency', function () {
 
   var DATA_COLL = [
     {
-      _id: 7
+      _id: 7,
+      name: 'seven'
     },
     {
-      _id: 8
+      _id: 8,
+      name: 'eight'
     },
     {
-      _id: 9
+      _id: 9,
+      name: 'nine'
     }
   ];
 
@@ -259,7 +262,7 @@ describe('text.frequency', function () {
     var attribute = 'meta.tf';
 
     var option = {
-      copy: [],
+      copy: ['name'],
       out: 'test.search.result'
     };
 
@@ -272,27 +275,24 @@ describe('text.frequency', function () {
     var expected = [
       {
         "_id": 9,
-        "value": {
-          "_score": 0.7521897121273947
-        }
+        "name": "nine",
+        "meta": {"tf": 0.7521897121273947}
       },
       {
         "_id": 7,
-        "value": {
-          "_score": 0.30968785970908075
-        }
+        "name": "seven",
+        "meta": {"tf": 0.30968785970908075}
       },
       {
         "_id": 8,
-        "value": {
-          "_score": 0.11328489511234544
-        }
+        "name": "eight",
+        "meta": {"tf": 0.11328489511234544}
       }
     ]
 
     text.search(collection, 'x a', collection_freq, attribute, field, option, function (err, result) {
       var sort = {};
-      sort['value._score'] = -1;
+      sort['meta.tf'] = -1;
       result.find({}, {sort: sort}).toArray(function (err, result) {
         result.should.eql(expected);
         done();
