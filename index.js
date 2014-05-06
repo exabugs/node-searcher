@@ -6,6 +6,7 @@
 
 var MongoClient = require("mongodb").MongoClient
   , text = require('./lib/text')
+  , frequency = require('./lib/text/frequency')
   ;
 
 function Searcher(url, field) {
@@ -31,6 +32,19 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
     }
   });
 };
+
+Searcher.prototype.countup = function (target, source, field, callback) {
+  var self = this;
+  this.open(function (err, db) {
+    if (err) {
+      callback(err);
+    } else {
+      frequency.countup(db, target, source, self.field, function (err) {
+        callback(err);
+      });
+    }
+  });
+}
 
 module.exports = Searcher;
 

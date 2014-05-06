@@ -135,13 +135,18 @@ describe('text.frequency', function () {
   });
 
   it('term_frequency', function (done) {
-    var collection = db.collection(COLL_FILES);
-    var attribute = 'tf'
+
+    var info = {
+      collection: COLL_FILES,
+      attribute: 'tf',
+      option: {
+        condition: {parents: 9}
+      }
+    }
+
     var field = ['key', 'val'];
-    var option = {
-      condition: {parents: 9}
-    };
-    frequency.term_frequency(collection, attribute, field, option, function (err, result) {
+
+    frequency.term_frequency(db, info, field, function (err, result) {
       should.not.exist(err);
       var expected = [
         {_id: 'a', value: 3},
@@ -154,13 +159,18 @@ describe('text.frequency', function () {
   });
 
   it('object_frequency', function (done) {
-    var collection = db.collection(COLL_FILES);
-    var attribute = 'tf'
-    var field = ['key', 'val'];
-    var option = {
-      condition: {parents: 9}
+
+    var info = {
+      collection: COLL_FILES,
+      attribute: 'tf',
+      option: {
+        condition: {parents: 9}
+      }
     };
-    frequency.object_frequency(collection, attribute, field, option, function (err, result) {
+
+    var field = ['key', 'val'];
+
+    frequency.object_frequency(db, info, field, function (err, result) {
       should.not.exist(err);
       var expected = [
         {_id: 'a', value: 0},
@@ -175,25 +185,25 @@ describe('text.frequency', function () {
   it('coutup', function (done) {
 
     var target = {
-      collection: db.collection(COLL),
+      collection: COLL,
       attribute: 'meta.tf',
       option: {
         condition: {}
       }
-    }
+    };
 
     var source = {
-      collection: db.collection(COLL_FILES),
+      collection: COLL_FILES,
       attribute: 'tf',
       key: 'parents',
       option: {
         condition: {}
       }
-    }
+    };
 
     var field = ['key', 'val'];
 
-    frequency.countup(target, source, field, function (err) {
+    frequency.countup(db, target, source, field, function (err) {
 
       should.not.exist(err);
       done();
@@ -203,15 +213,31 @@ describe('text.frequency', function () {
 
   it('tfiof', function (done) {
 
-    var collection = db.collection(COLL);
-    var attribute = 'meta.tf'
-    var field = ['key', 'val', 'tfiof'];
-    var option = {
-      out: COLL_OF
+    var info = {
+      collection: COLL,
+      attribute: 'meta.tf',
+      option: {
+        out: COLL_OF
+      }
     };
-    frequency.object_frequency(collection, attribute, field, option, function (err, of_coll) {
 
-      frequency.tfiof(collection, attribute, field, of_coll, option, function (err, result) {
+    var field = ['key', 'val', 'tfiof'];
+
+    frequency.object_frequency(db, info, field, function (err) {
+
+      var target = {
+        collection: COLL_OF
+      };
+
+      var source = {
+        collection: COLL,
+        attribute: 'meta.tf',
+        option: {
+          condition: {}
+        }
+      };
+
+      frequency.tfiof(db, target, source, field, function (err, result) {
         should.not.exist(err);
         done();
       });
