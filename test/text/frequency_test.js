@@ -217,7 +217,8 @@ describe('text.frequency', function () {
       collection: COLL,
       attribute: 'meta.tf',
       option: {
-        out: COLL_OF
+        out: COLL_OF,
+        condition: {}
       }
     };
 
@@ -226,15 +227,15 @@ describe('text.frequency', function () {
     frequency.object_frequency(db, info, field, function (err) {
 
       var target = {
-        collection: COLL_OF
-      };
-
-      var source = {
         collection: COLL,
         attribute: 'meta.tf',
         option: {
           condition: {}
         }
+      };
+
+      var source = {
+        collection: COLL_OF
       };
 
       frequency.tfiof(db, target, source, field, function (err, result) {
