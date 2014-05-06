@@ -19,13 +19,13 @@ Searcher.prototype.open = function (callback) {
   });
 };
 
-Searcher.prototype.batch = function (src, condition, callback) {
+Searcher.prototype.batch = function (src, condition, attribute, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      text.batch(db, src, condition, self.field, function (err, count) {
+      text.batch(db, src, condition, attribute, self.field, function (err, count) {
         callback(err, count);
       });
     }
