@@ -174,17 +174,26 @@ describe('text.frequency', function () {
 
   it('coutup', function (done) {
 
+    var target = {
+      collection: db.collection(COLL),
+      attribute: 'meta.tf',
+      option: {
+        condition: {}
+      }
+    }
 
-    var master_collection = db.collection(COLL);
-    var master_option = {
-      attribute: 'meta.tf'
-    };
-    var match = 'parents'
-    var collection = db.collection(COLL_FILES);
-    var attribute = 'tf'
+    var source = {
+      collection: db.collection(COLL_FILES),
+      attribute: 'tf',
+      key: 'parents',
+      option: {
+        condition: {}
+      }
+    }
+
     var field = ['key', 'val'];
-    var option = {};
-    frequency.countup(master_collection, master_option, match, collection, attribute, field, option, function (err) {
+
+    frequency.countup(target, source, field, function (err) {
 
       should.not.exist(err);
       done();
