@@ -21,6 +21,13 @@ Searcher.prototype.open = function (callback) {
   });
 };
 
+/**
+ *
+ * @param src
+ * @param condition
+ * @param attribute
+ * @param callback
+ */
 Searcher.prototype.batch = function (src, condition, attribute, callback) {
   var self = this;
   this.open(function (err, db) {
@@ -34,6 +41,12 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
   });
 };
 
+/**
+ *
+ * @param target
+ * @param source
+ * @param callback
+ */
 Searcher.prototype.countup = function (target, source, callback) {
   var self = this;
   this.open(function (err, db) {
@@ -74,6 +87,11 @@ Searcher.prototype.object_frequency = function (info, callback) {
   });
 }
 
+/**
+ *
+ * @param target
+ * @param callback
+ */
 Searcher.prototype.tfiof = function (target, callback) {
   var self = this;
   this.open(function (err, db) {
@@ -87,6 +105,13 @@ Searcher.prototype.tfiof = function (target, callback) {
   });
 }
 
+/**
+ *
+ * @param collection
+ * @param condition
+ * @param option
+ * @param callback
+ */
 Searcher.prototype.search = function (collection, condition, option, callback) {
   var self = this;
   this.open(function (err, db) {
