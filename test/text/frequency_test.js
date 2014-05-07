@@ -258,8 +258,6 @@ describe('text.frequency', function () {
     var field = ['key', 'val', 'tfiof'];
 
     var collection = db.collection(COLL);
-    var collection_freq = db.collection(COLL_OF);
-    var attribute = 'meta.tf';
 
     var option = {
       copy: ['name'],
@@ -269,8 +267,6 @@ describe('text.frequency', function () {
     var condition = {
       'meta.tf': 'a x'
     };
-
-    //exports.search = function (collection, text, collection_df, attribute, field, option, callback) {
 
     var expected = [
       {
@@ -291,7 +287,6 @@ describe('text.frequency', function () {
     ]
 
     text.search(db, collection, condition, option, freq, field, function (err, result) {
-    //text.search(collection, 'x a', collection_freq, attribute, field, option, function (err, result) {
       var sort = {};
       sort['meta.tf'] = -1;
       result.find({}, {sort: sort}).toArray(function (err, result) {
