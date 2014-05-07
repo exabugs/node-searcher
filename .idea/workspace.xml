@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f54579e9-7d88-4528-aca1-160ef324cb41" name="Default" comment="Delete .idea.&#10;">
+    <list default="true" id="f54579e9-7d88-4528-aca1-160ef324cb41" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="node-searcher.iws" />
@@ -487,7 +487,11 @@
       <created>1399442937816</created>
       <updated>1399442937816</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Delete .idea.&#10;">
+      <created>1399443433192</created>
+      <updated>1399443433192</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -555,7 +559,8 @@
     <MESSAGE value="Refactor 'search'." />
     <MESSAGE value="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;" />
     <MESSAGE value="Delete .idea." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete .idea." />
+    <MESSAGE value="Delete .idea.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete .idea.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
