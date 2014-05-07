@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f54579e9-7d88-4528-aca1-160ef324cb41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/db/index.js" afterPath="$PROJECT_DIR$/lib/db/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/text/index.js" afterPath="$PROJECT_DIR$/lib/text/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="f54579e9-7d88-4528-aca1-160ef324cb41" name="Default" comment="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/node-searcher.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="node-searcher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,26 +35,19 @@
       <file leaf-file-name="frequency.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/text/frequency.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="16" selection-start="3242" selection-end="3243" vertical-scroll-proportion="0.0" vertical-offset="1903" max-vertical-offset="3345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="3" selection-end="3" vertical-scroll-proportion="0.02617801" vertical-offset="0" max-vertical-offset="630">
+            <state line="45" column="8" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0" vertical-offset="516" max-vertical-offset="3285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/db/index.js">
+        <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="15" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="225">
-              <folding />
+            <state line="41" column="20" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="840">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,7 +64,7 @@
       <file leaf-file-name="frequency_test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/text/frequency_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="0" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="3915">
+            <state line="280" column="0" selection-start="5008" selection-end="5008" vertical-scroll-proportion="0.0" vertical-offset="3781" max-vertical-offset="4575">
               <folding />
             </state>
           </provider>
@@ -85,11 +82,17 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/text/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3585">
-              <folding>
-                <marker date="1399361213000" expanded="true" signature="1994:2019" placeholder="{...}" />
-                <marker date="1399361213000" expanded="true" signature="1996:2011" placeholder="{...}" />
-              </folding>
+            <state line="29" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="3630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.1380368" vertical-offset="0" max-vertical-offset="326">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,7 +100,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/vector/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="21" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1290">
+            <state line="21" column="8" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1335">
               <folding />
             </state>
           </provider>
@@ -139,8 +142,12 @@
         <option value="$PROJECT_DIR$/test/vector/index_test.js" />
         <option value="$PROJECT_DIR$/.coveralls.yml" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/lib/text/index.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/lib/text/frequency.js" />
+        <option value="$PROJECT_DIR$/lib/vector/index.js" />
+        <option value="$PROJECT_DIR$/lib/text/index.js" />
+        <option value="$PROJECT_DIR$/test/text/frequency_test.js" />
       </list>
     </option>
   </component>
@@ -148,8 +155,8 @@
     <data>$PROJECT_DIR$/node_modules/mocha</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="116" />
+    <option name="x" value="19" />
+    <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="742" />
   </component>
@@ -195,6 +202,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="node-searcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-searcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-searcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-searcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-searcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="text" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,7 +446,51 @@
       <created>1398876940970</created>
       <updated>1398876940970</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;">
+      <created>1399361620045</created>
+      <updated>1399361620045</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add .idea to .gitignore.">
+      <created>1399361922444</created>
+      <updated>1399361922444</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;">
+      <created>1399363413546</created>
+      <updated>1399363413546</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modified 'countup' function.">
+      <created>1399368138837</created>
+      <updated>1399368138837</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactor.">
+      <created>1399370057314</created>
+      <updated>1399370057314</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;">
+      <created>1399382079578</created>
+      <updated>1399382079578</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor.">
+      <created>1399386632556</created>
+      <updated>1399386632556</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor.">
+      <created>1399388341359</created>
+      <updated>1399388341359</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactor.">
+      <created>1399395656448</created>
+      <updated>1399395656448</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor 'search'.">
+      <created>1399440851619</created>
+      <updated>1399440851619</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;">
+      <created>1399442799688</created>
+      <updated>1399442799688</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -431,15 +514,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="116" width="1366" height="742" extended-state="0" />
+    <frame x="19" y="27" width="1366" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39583334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39583334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36698717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -448,7 +532,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -463,15 +546,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Add .idea to .gitignore." />
+    <MESSAGE value="Modified 'countup' function." />
+    <MESSAGE value="Refactor." />
+    <MESSAGE value="Refactor 'search'." />
     <MESSAGE value="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;" />
     <option name="LAST_COMMIT_MESSAGE" value="Add Mocha test.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   .idea/workspace.xml&#10;#&#9;modified:   package.json&#10;#&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -520,10 +610,7 @@
     <entry file="file://$PROJECT_DIR$/lib/text/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="26" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="3705">
-          <folding>
-            <marker date="1399361213000" expanded="true" signature="1994:2019" placeholder="{...}" />
-            <marker date="1399361213000" expanded="true" signature="1996:2011" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -555,7 +642,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/vector/index_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1425" />
+        <state line="86" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1425">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/text/index_test.js">
@@ -596,10 +685,7 @@
     <entry file="file://$PROJECT_DIR$/lib/text/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="3735">
-          <folding>
-            <marker date="1399361213000" expanded="true" signature="1994:2019" placeholder="{...}" />
-            <marker date="1399361213000" expanded="true" signature="1996:2011" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +716,9 @@
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -714,12 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/vector/index_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/text/index_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+        <state line="86" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1425">
           <folding />
         </state>
       </provider>
@@ -729,11 +812,6 @@
         <state line="137" column="26" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.0" vertical-offset="1950" max-vertical-offset="3240">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.coveralls.yml">
@@ -753,13 +831,6 @@
         <state line="10" column="23" selection-start="365" selection-end="365" vertical-scroll-proportion="0.5226481" vertical-offset="0" max-vertical-offset="750" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/text/frequency_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="0" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="3915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/db/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="15" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="225">
@@ -767,33 +838,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="20" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="840">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/vector/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="21" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1290">
+        <state line="21" column="8" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/text/index_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/text/frequency.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="16" selection-start="3242" selection-end="3243" vertical-scroll-proportion="0.0" vertical-offset="1903" max-vertical-offset="3345">
+        <state line="45" column="8" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0" vertical-offset="516" max-vertical-offset="3285">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/text/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3585">
-          <folding>
-            <marker date="1399361213000" expanded="true" signature="1994:2019" placeholder="{...}" />
-            <marker date="1399361213000" expanded="true" signature="1996:2011" placeholder="{...}" />
-          </folding>
+        <state line="29" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="3630">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/test/text/frequency_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="3" selection-end="3" vertical-scroll-proportion="0.02617801" vertical-offset="0" max-vertical-offset="573">
+        <state line="280" column="0" selection-start="5008" selection-end="5008" vertical-scroll-proportion="0.0" vertical-offset="3781" max-vertical-offset="4575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.1380368" vertical-offset="0" max-vertical-offset="326">
           <folding />
         </state>
       </provider>
