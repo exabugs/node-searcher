@@ -41,65 +41,27 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
   });
 };
 
-/**
- *
- * @param target
- * @param source
- * @param callback
- */
-Searcher.prototype.countup = function (target, source, callback) {
+
+Searcher.prototype.indexing = function (target, source, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
-      callback(err);
+      return callback(err);
     } else {
       frequency.countup(db, target, source, self.field, function (err) {
-        callback(err);
-      });
-    }
-  });
-}
-
-/**
- *
- * @param info
- * @param callback
- *
-    var info = {
-      collection: COLL,
-      attribute: 'meta.tf',
-      option: {
-        out: COLL_OF,
-        condition: {}
-      }
-    };
- */
-Searcher.prototype.object_frequency = function (info, callback) {
-  var self = this;
-  this.open(function (err, db) {
-    if (err) {
-      callback(err);
-    } else {
-      frequency.object_frequency(db, info, self.freq, self.field, function (err) {
-        callback(err);
-      });
-    }
-  });
-}
-
-/**
- *
- * @param target
- * @param callback
- */
-Searcher.prototype.tfiof = function (target, callback) {
-  var self = this;
-  this.open(function (err, db) {
-    if (err) {
-      callback(err);
-    } else {
-      frequency.tfiof(db, target, self.freq, self.field, function (err) {
-        callback(err);
+        if (err) {
+          return callback(err);
+        } else {
+          frequency.object_frequency(db, target, self.freq, self.field, function (err) {
+            if (err) {
+              return callback(err);
+            } else {
+              frequency.tfiof(db, target, self.freq, self.field, function (err) {
+                return callback(err);
+              });
+            }
+          });
+        }
       });
     }
   });
