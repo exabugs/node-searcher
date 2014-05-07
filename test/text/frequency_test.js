@@ -173,7 +173,7 @@ describe('text.frequency', function () {
 
     var field = ['key', 'val'];
 
-    frequency.object_frequency(db, info, field, {}, function (err, result) {
+    frequency.object_frequency(db, info, {}, field, function (err, result) {
       should.not.exist(err);
       var expected = [
         {_id: 'a', value: 0},
