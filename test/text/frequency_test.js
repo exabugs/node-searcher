@@ -226,22 +226,13 @@ describe('text.frequency', function () {
       collection: COLL,
       attribute: 'meta.tf',
       option: {
-        out: COLL_OF,
         condition: {}
       }
     };
 
     frequency.object_frequency(db, info, freq, field, function (err) {
 
-      var target = {
-        collection: COLL,
-        attribute: 'meta.tf',
-        option: {
-          condition: {}
-        }
-      };
-
-      frequency.tfiof(db, target, freq, field, function (err, result) {
+      frequency.tfiof(db, info, freq, field, function (err, result) {
         should.not.exist(err);
         done();
       });
