@@ -290,7 +290,8 @@ describe('text.frequency', function () {
       }
     ]
 
-    text.search(collection, 'x a', collection_freq, attribute, field, option, function (err, result) {
+    text.search(db, collection, condition, option, freq, field, function (err, result) {
+    //text.search(collection, 'x a', collection_freq, attribute, field, option, function (err, result) {
       var sort = {};
       sort['meta.tf'] = -1;
       result.find({}, {sort: sort}).toArray(function (err, result) {
