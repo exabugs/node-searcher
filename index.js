@@ -32,10 +32,6 @@ Searcher.prototype.open = function (callback) {
 
  var URL = 'mongodb://127.0.0.1:27017/test';
 
- var target = {
-        collection: 'mails'
-      };
-
  var source = {
         collection: 'mails.files',
         attribute: 'metadata.tf',
@@ -51,13 +47,13 @@ Searcher.prototype.open = function (callback) {
  searcher.batch('mails', condition, 'metadata.tf', function (err, count) {
 
  */
-Searcher.prototype.batch = function (target, source, callback) {
+Searcher.prototype.batch = function (source, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      text.batch(db, target, source, self.field, function (err, count) {
+      text.batch(db, source, self.field, function (err, count) {
         callback(err, count);
       });
     }
