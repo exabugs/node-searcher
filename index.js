@@ -27,6 +27,20 @@ Searcher.prototype.open = function (callback) {
  * @param condition
  * @param attribute
  * @param callback
+
+ var FIELD = ['k', 'c', 'w'];
+
+ var URL = 'mongodb://127.0.0.1:27017/test';
+
+ var condition = {
+        'contentType': 'text/plain',
+        'metadata.parent': mailInfo._id
+      };
+
+ var searcher = new Searcher(URL, FIELD);
+
+ searcher.batch('mails', condition, 'metadata.tf', function (err, count) {
+
  */
 Searcher.prototype.batch = function (src, condition, attribute, callback) {
   var self = this;
@@ -47,6 +61,8 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
  * @param source
  * @param callback
 
+ var FREQ = {'tf': 'mails.of'};
+
  var target = {
       collection: 'mails',
       attribute: 'tf',
@@ -63,6 +79,10 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
         condition: {}
       }
     };
+
+ var searcher = new Searcher(URL, FIELD, FREQ);
+
+ searcher.indexing(target, source, function (err) {
 
  */
 Searcher.prototype.indexing = function (target, source, callback) {
@@ -99,14 +119,18 @@ Searcher.prototype.indexing = function (target, source, callback) {
 
  var collection = db.collection('mails');
 
+ var condition = {
+      'tf': '先日フジテレビでラーメン'
+    };
+
  var option = {
       copy: ['subject'],
       out: 'mails.search.result'
     };
 
- var condition = {
-      'tf': '先日フジテレビでラーメン'
-    };
+ var searcher = new Searcher(URL, FIELD, FREQ);
+
+ searcher.search(collection, condition, option, function (err) {
 
  */
 Searcher.prototype.search = function (collection, condition, option, callback) {
