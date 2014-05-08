@@ -32,9 +32,19 @@ Searcher.prototype.open = function (callback) {
 
  var URL = 'mongodb://127.0.0.1:27017/test';
 
- var condition = {
-        'contentType': 'text/plain',
-        'metadata.parent': mailInfo._id
+ var target = {
+        collection: 'mails'
+      };
+
+ var source = {
+        collection: 'mails.files',
+        attribute: 'metadata.tf',
+        option: {
+          condition: {
+            'contentType': 'text/plain',
+            'metadata.parent': mailInfo._id
+          }
+        }
       };
 
  var searcher = new Searcher(URL, FIELD);
@@ -42,13 +52,13 @@ Searcher.prototype.open = function (callback) {
  searcher.batch('mails', condition, 'metadata.tf', function (err, count) {
 
  */
-Searcher.prototype.batch = function (src, condition, attribute, callback) {
+Searcher.prototype.batch = function (target, source, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      text.batch(db, src, condition, attribute, self.field, function (err, count) {
+      text.batch(db, target, source, self.field, function (err, count) {
         callback(err, count);
       });
     }
