@@ -19,7 +19,7 @@ function open(callback) {
   MongoClient.connect(this.url, function (err, db) {
     callback(err, db);
   });
-};
+}
 
 /**
  *
@@ -51,15 +51,15 @@ Searcher.prototype.indexing = function (target, source, callback) {
   var self = this;
   open(function (err, db) {
     if (err) {
-      return callback(err);
+      callback(err);
     } else {
       frequency.countup(db, target, source, self.field, function (err) {
         if (err) {
-          return callback(err);
+          callback(err);
         } else {
           frequency.object_frequency(db, target, self.freq, self.field, function (err) {
             if (err) {
-              return callback(err);
+              callback(err);
             } else {
               frequency.tfiof(db, target, self.freq, self.field, function (err) {
                 return callback(err);
@@ -70,7 +70,7 @@ Searcher.prototype.indexing = function (target, source, callback) {
       });
     }
   });
-}
+};
 
 /**
  *
@@ -90,7 +90,7 @@ Searcher.prototype.search = function (collection, condition, option, callback) {
       });
     }
   });
-}
+};
 
 module.exports = Searcher;
 
