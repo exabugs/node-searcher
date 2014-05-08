@@ -46,6 +46,24 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
  * @param target
  * @param source
  * @param callback
+
+ var target = {
+      collection: 'mails',
+      attribute: 'tf',
+      option: {
+        condition: {}
+      }
+    };
+
+ var source = {
+      collection: 'mails.files',
+      attribute: 'metadata.tf',
+      key: 'metadata.parent',
+      option: {
+        condition: {}
+      }
+    };
+
  */
 Searcher.prototype.indexing = function (target, source, callback) {
   var self = this;
@@ -78,6 +96,18 @@ Searcher.prototype.indexing = function (target, source, callback) {
  * @param condition
  * @param option
  * @param callback
+
+ var collection = db.collection('mails');
+
+ var option = {
+      copy: ['subject'],
+      out: 'mails.search.result'
+    };
+
+ var condition = {
+      'tf': '先日フジテレビでラーメン'
+    };
+
  */
 Searcher.prototype.search = function (collection, condition, option, callback) {
   var self = this;
