@@ -62,7 +62,7 @@ Searcher.prototype.indexing = function (target, source, callback) {
               callback(err);
             } else {
               frequency.tfiof(db, target, self.freq, self.field, function (err) {
-                return callback(err);
+                callback(err);
               });
             }
           });
