@@ -15,11 +15,11 @@ function Searcher(url, field, freq) {
   this.freq = freq; // freq = {'meta.tf': COLL_OF};
 }
 
-function open(callback) {
+Searcher.prototype.open = function (callback) {
   MongoClient.connect(this.url, function (err, db) {
     callback(err, db);
   });
-}
+};
 
 /**
  *
@@ -30,7 +30,7 @@ function open(callback) {
  */
 Searcher.prototype.batch = function (src, condition, attribute, callback) {
   var self = this;
-  open(function (err, db) {
+  this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
@@ -49,7 +49,7 @@ Searcher.prototype.batch = function (src, condition, attribute, callback) {
  */
 Searcher.prototype.indexing = function (target, source, callback) {
   var self = this;
-  open(function (err, db) {
+  this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
@@ -81,7 +81,7 @@ Searcher.prototype.indexing = function (target, source, callback) {
  */
 Searcher.prototype.search = function (collection, condition, option, callback) {
   var self = this;
-  open(function (err, db) {
+  this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
