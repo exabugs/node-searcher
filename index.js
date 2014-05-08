@@ -41,8 +41,7 @@ Searcher.prototype.open = function (callback) {
         attribute: 'metadata.tf',
         option: {
           condition: {
-            'contentType': 'text/plain',
-            'metadata.parent': mailInfo._id
+            'contentType': 'text/plain'
           }
         }
       };
