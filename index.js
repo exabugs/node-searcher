@@ -122,15 +122,15 @@ Searcher.prototype.indexing = function (target, source, callback) {
  * @param option
  * @param callback
 
- var collection = db.collection('mails');
-
- var condition = {
-      'tf': '先日フジテレビでラーメン'
-    };
-
- var option = {
-      copy: ['subject'],
-      out: 'mails.search.result'
+ var target = {
+      collection: 'mails',
+      option: {
+        condition: {
+          'tf': '先日フジテレビでラーメン'
+        },
+        copy: ['subject'],
+        out: 'mails.search.result'
+      }
     };
 
  var searcher = new Searcher(URL, FIELD, FREQ);
@@ -138,13 +138,13 @@ Searcher.prototype.indexing = function (target, source, callback) {
  searcher.search(collection, condition, option, function (err) {
 
  */
-Searcher.prototype.search = function (collection, condition, option, callback) {
+Searcher.prototype.search = function (target, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      text.search(db, collection, condition, option, self.freq, self.field, function (err) {
+      text.search(db, target, self.freq, self.field, function (err) {
         callback(err);
       });
     }
@@ -152,4 +152,3 @@ Searcher.prototype.search = function (collection, condition, option, callback) {
 };
 
 module.exports = Searcher;
-

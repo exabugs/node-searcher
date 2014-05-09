@@ -259,6 +259,17 @@ describe('text.frequency', function () {
       'meta.tf': 'a x'
     };
 
+    var target = {
+      collection: COLL,
+      option: {
+        condition: {
+          'meta.tf': 'a x'
+        },
+        copy: ['name'],
+        out: 'test.search.result'
+      }
+    };
+
     var expected = [
       {
         "_id": 9,
@@ -277,7 +288,7 @@ describe('text.frequency', function () {
       }
     ]
 
-    text.search(db, collection, condition, option, freq, field, function (err, result) {
+    text.search(db, target, freq, field, function (err, result) {
       var sort = {};
       sort['meta.tf'] = -1;
       result.find({}, {sort: sort}).toArray(function (err, result) {
