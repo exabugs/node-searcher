@@ -66,21 +66,37 @@ describe('index', function () {
   });
 
 
+  /**
+   * コサイン値(類似度)
+   * @param collection Collection : 検索対象コレクション
+   * @param condition
+   * @param condition2 [ {attribute: 'meta.tf', keyword: [ {key: 'a', val: 1, tfiof: 0.938...}, ... ]
+   * @param option
+   * @param field
+   * @param callback
+   */
+    //exports.cosine = function (collection, condition, condition2, option, field, callback) {
   it('cosine', function (done) {
 
     var collection = db.collection(COLL);
-    var attribute = 'tf';
-    var field = ['key', 'val'];
-    var keyword = [
-      {key: 'a', val: 1},
-      {key: 'c', val: 1}
+    var field = ['key', 'val', 'tfiof'];
+    var condition = {user_id: 1};
+    var condition2 = [
+      {
+        attribute: 'tf',
+        keyword: [
+          {key: 'a', val: 1, tfoif: 0.5},
+          {key: 'c', val: 1, tfiof: 0.5}
+        ]
+      }
     ];
-    var option = {
-      condition: {user_id: 1},
-      copy: ['user_id']
-    }
 
-    vector.cosine(collection, attribute, field, keyword, option, function (err, result) {
+    var option = {
+      copy: ['user_id'],
+      out: 'test.search.result'
+    };
+
+    vector.cosine(collection, condition, condition2, option, field, function (err, result) {
       done(err);
     });
   });
