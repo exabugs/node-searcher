@@ -47,7 +47,7 @@ Searcher.prototype.open = function (callback) {
  searcher.batch('mails', condition, 'metadata.tf', function (err, count) {
 
  */
-Searcher.prototype.batch = function (source, callback) {
+Searcher.prototype.parse = function (source, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
