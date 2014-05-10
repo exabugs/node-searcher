@@ -32,8 +32,8 @@ describe('text.index', function () {
 
   describe('parse 1', function () {
     it('should return -1 when the value is not present', function (done) {
-      text.parse('食後にコーヒーを飲む', function (err, words) {
-        words.should.eql({'食後': 1, 'コーヒー': 1});
+      text.parse('食後にコーヒーを飲む。１２３。', function (err, words) {
+        words.should.eql({'123':1, '食後': 1, 'コーヒー': 1});
         done();
       })
     })
