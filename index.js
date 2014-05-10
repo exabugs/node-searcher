@@ -151,4 +151,22 @@ Searcher.prototype.search = function (target, callback) {
   });
 };
 
+/**
+ * 相互類似度
+ * @param source
+ * @param callback
+ */
+Searcher.prototype.mutualize = function (source, callback) {
+  var self = this;
+  this.open(function (err, db) {
+    if (err) {
+      callback(err);
+    } else {
+      frequency.mutualize(db, source, self.field, function (err) {
+        callback(err);
+      });
+    }
+  });
+};
+
 module.exports = Searcher;

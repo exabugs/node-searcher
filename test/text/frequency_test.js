@@ -298,4 +298,32 @@ describe('text.frequency', function () {
     });
   });
 
+  it('mutualize', function (done) {
+
+    var freq = {
+      'meta.tf': COLL_OF
+    };
+
+    var field = ['key', 'val', 'tfiof'];
+
+    var source = {
+      collection: COLL,
+      attribute: 'meta.tf',
+      option: {
+        condition: {
+        },
+        out: 'test.souge'
+      }
+    };
+
+    frequency.mutualize(db, source, field, function (err, result) {
+      var sort = {};
+      sort['meta.tf'] = -1;
+      result.find({}, {sort: sort}).toArray(function (err, result) {
+//        result.should.eql(expected);
+        done();
+      });
+    });
+  });
+
 });
