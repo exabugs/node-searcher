@@ -48,12 +48,12 @@ Searcher.prototype.open = function (callback) {
 
  */
 Searcher.prototype.parse = function (source, callback) {
-  var self = this;
+  var field = this.field;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      text.batch(db, source, self.field, function (err, count) {
+      text.batch(db, source, field, function (err, count) {
         callback(err, count);
       });
     }
@@ -91,20 +91,21 @@ Searcher.prototype.parse = function (source, callback) {
 
  */
 Searcher.prototype.indexing = function (target, source, callback) {
-  var self = this;
+  var freq = this.freq;
+  var field = this.field;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      frequency.countup(db, target, source, self.field, function (err) {
+      frequency.countup(db, target, source, field, function (err) {
         if (err) {
           callback(err);
         } else {
-          frequency.object_frequency(db, target, self.freq, self.field, function (err) {
+          frequency.object_frequency(db, target, freq, field, function (err) {
             if (err) {
               callback(err);
             } else {
-              frequency.tfiof(db, target, self.freq, self.field, function (err) {
+              frequency.tfiof(db, target, freq, field, function (err) {
                 callback(err);
               });
             }
@@ -139,12 +140,13 @@ Searcher.prototype.indexing = function (target, source, callback) {
 
  */
 Searcher.prototype.search = function (target, callback) {
-  var self = this;
+  var freq = this.freq;
+  var field = this.field;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      text.search(db, target, self.freq, self.field, function (err) {
+      text.search(db, target, freq, field, function (err) {
         callback(err);
       });
     }
