@@ -54,6 +54,7 @@ Searcher.prototype.parse = function (source, callback) {
       callback(err);
     } else {
       text.batch(db, source, field, function (err, count) {
+        db.close();
         callback(err, count);
       });
     }
@@ -99,13 +100,16 @@ Searcher.prototype.indexing = function (target, source, callback) {
     } else {
       frequency.countup(db, target, source, field, function (err) {
         if (err) {
+          db.close();
           callback(err);
         } else {
           frequency.object_frequency(db, target, freq, field, function (err) {
             if (err) {
+              db.close();
               callback(err);
             } else {
               frequency.tfiof(db, target, freq, field, function (err) {
+                db.close();
                 callback(err);
               });
             }
@@ -147,6 +151,7 @@ Searcher.prototype.search = function (target, callback) {
       callback(err);
     } else {
       text.search(db, target, freq, field, function (err) {
+        db.close();
         callback(err);
       });
     }
@@ -165,6 +170,7 @@ Searcher.prototype.mutualize = function (source, callback) {
       callback(err);
     } else {
       frequency.mutualize(db, source, self.field, function (err) {
+        db.close();
         callback(err);
       });
     }
