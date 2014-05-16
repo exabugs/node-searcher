@@ -162,14 +162,60 @@ Searcher.prototype.search = function (target, callback) {
  * 相互類似度
  * @param source
  * @param callback
+
+ var source = {
+      collection: 'mails',
+      attribute: 'tf',
+      option: {
+        out: 'mails.mutual'
+      }
+    };
+
  */
 Searcher.prototype.mutualize = function (source, callback) {
+  var field = this.field;
+  this.open(function (err, db) {
+    if (err) {
+      callback(err);
+    } else {
+      frequency.mutualize(db, source, field, function (err) {
+        db.close();
+        callback(err);
+      });
+    }
+  });
+};
+
+/**
+ * 主座標分析
+ * →「R」が実行可能な場合、類似検索結果に対して主座標分析を行うことができる。
+ * @param target 検索結果コレクション ({x, y}アトリビュート指定)
+ * @param source ofコレクション
+ * @param callback
+
+ var target = {
+      collection: 'mails.search.result',
+      attribute: 'tf',
+      option: {
+        field: ['x, 'y']
+      }
+    };
+
+ var source = {
+      collection: 'mails.mutual',
+      option: {
+      }
+    };
+
+
+ */
+Searcher.prototype.cmdscale = function (target, source, callback) {
   var self = this;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
-      frequency.mutualize(db, source, self.field, function (err) {
+      frequency.cmdscale(db, target, source, function (err) {
         db.close();
         callback(err);
       });
