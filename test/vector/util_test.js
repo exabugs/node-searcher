@@ -269,6 +269,25 @@ describe('util', function () {
 
     });
 
+    it('掛け算', function () {
+      var array_a = [
+        {k: '70', v: 2},
+        {k: '10', v: 4}, //
+        {k: '90', v: 2}
+      ];
+
+      var result = util.multiply(array_a, -5);
+
+      var expected = [
+        {k: '70', v: -10},
+        {k: '10', v: -20}, //
+        {k: '90', v: -10}
+      ];
+
+      result.should.eql(expected);
+
+    });
+
   });
 
 });
