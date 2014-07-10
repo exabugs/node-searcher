@@ -9,16 +9,25 @@ var MongoClient = require("mongodb").MongoClient
   , frequency = require('./lib/text/frequency')
   ;
 
-function Searcher(url, field, freq) {
-  this.url = url; // 'mongodb://127.0.0.1:27017/test'
+function Searcher(db, field, freq) {
+  if ('string' == typeof db) {
+    this.url = url; // 'mongodb://127.0.0.1:27017/test'
+  } else {
+    this.db = db;
+  }
   this.field = field; // ['k', 'c', 'v'] , ['key', 'val', 'tfiof'] etc.
   this.freq = freq; // freq = {'meta.tf': COLL_OF};
+  return this;
 }
 
 Searcher.prototype.open = function (callback) {
-  MongoClient.connect(this.url, function (err, db) {
-    callback(err, db);
-  });
+  if (this.db) {
+    return callback(null, this.db);
+  } else {
+    MongoClient.connect(this.url, function (err, db) {
+      callback(err, db);
+    });
+  }
 };
 
 /**
