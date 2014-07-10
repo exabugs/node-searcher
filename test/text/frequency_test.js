@@ -17,7 +17,7 @@ var _ = require('underscore')
 describe('text.frequency', function () {
 
   var db;
-  var COLL_FILES = 'test.files'
+  var COLL_FILES = 'test.files';
   var COLL = 'test';
   var COLL_OF = 'test.of';
 
@@ -145,7 +145,7 @@ describe('text.frequency', function () {
       option: {
         condition: {parents: 9}
       }
-    }
+    };
 
     var field = ['key', 'val'];
 
@@ -274,19 +274,19 @@ describe('text.frequency', function () {
       {
         "_id": 9,
         "name": "nine",
-        "meta": {"tf": 0.7521897121273947}
+        "meta": {"tf": {score: 0.7521897121273947}}
       },
       {
         "_id": 7,
         "name": "seven",
-        "meta": {"tf": 0.30968785970908075}
+        "meta": {"tf": {score: 0.30968785970908075}}
       },
       {
         "_id": 8,
         "name": "eight",
-        "meta": {"tf": 0.11328489511234544}
+        "meta": {"tf": {score: 0.11328489511234544}}
       }
-    ]
+    ];
 
     text.search(db, target, freq, field, function (err, result) {
       var sort = {};

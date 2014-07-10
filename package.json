@@ -38,7 +38,7 @@
     "async": "^0.8.0",
     "log": "^1.4.0",
     "mongodb": "^1.4.2",
-    "node-wakame": "^1.1.1",
+    "node-wakame": "^1.1.3",
     "underscore": "^1.6.0"
   }
 }
