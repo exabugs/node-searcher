@@ -204,6 +204,50 @@ describe('util', function () {
       value.should.eql(expected);
     });
 
+    it('和', function () {
+      var array_a = [
+        {k: '70', v: 2},
+        {k: '10', v: 4}, //
+        {k: '50', v: 2},
+        {k: '30', v: 4}, //
+        {k: '90', v: 2}
+      ];
+      array_a = util.sort(array_a);
+
+      var array_b = [
+        {k: '10', v: -4}, //
+        {k: '12', v: 2},
+        {k: '15', v: 2},
+        {k: '20', v: 2},
+        {k: '30', v: -4}, //
+        {k: '35', v: 2}
+      ];
+      array_b = util.sort(array_b);
+
+
+      var expected = [
+        {k: '10', v: 0}, //
+        {k: '12', v: 2},
+        {k: '15', v: 2},
+        {k: '20', v: 2},
+        {k: '30', v: 0}, //
+        {k: '35', v: 2},
+        {k: '50', v: 2},
+        {k: '70', v: 2},
+        {k: '90', v: 2}
+      ];
+
+      {
+        var result = util.sum(array_b, array_a);
+        result.should.eql(expected);
+      }
+      {
+        var result = util.sum(array_a, array_b);
+        result.should.eql(expected);
+      }
+
+    });
+
   });
 
 });
