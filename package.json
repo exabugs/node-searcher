@@ -1,6 +1,6 @@
 {
   "name": "node-searcher",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "TF-IDF Searcher",
   "main": "index.js",
   "scripts": {
