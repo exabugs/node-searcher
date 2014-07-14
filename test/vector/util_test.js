@@ -34,6 +34,20 @@ describe('util', function () {
       result.should.eql(expected);
     });
 
+    it('ノルム2', function () {
+      var array = [
+        {v: 6},
+        {},
+        {v: 2}
+      ];
+
+      var result = util.norm(array);
+
+      var expected = Math.sqrt(6 * 6 + 2 * 2)
+
+      result.should.eql(expected);
+    });
+
     /**
      * 正規化
      * @param array
@@ -53,6 +67,25 @@ describe('util', function () {
       var expected = [
         {v: 6 / norm},
         {v: 4 / norm},
+        {v: 2 / norm}
+      ];
+
+      result.should.eql(expected);
+    });
+
+    it('正規化2', function () {
+      var array = [
+        {v: 6},
+        {},
+        {v: 2}
+      ];
+
+      var result = util.normalize(array);
+
+      var norm = Math.sqrt(6 * 6 + 2 * 2)
+      var expected = [
+        {v: 6 / norm},
+        {},
         {v: 2 / norm}
       ];
 
