@@ -58,13 +58,21 @@ Searcher.prototype.open = function (callback) {
  */
 Searcher.prototype.parse = function (source, callback) {
   var field = this.field;
+  var freq = this.freq;
   this.open(function (err, db) {
     if (err) {
       callback(err);
     } else {
       text.batch(db, source, field, function (err, count) {
-        db.close();
-        callback(err, count);
+        if (err) {
+          db.close();
+          callback(err);
+        } else {
+          frequency.tfiof(db, source, freq, field, function (err) {
+            db.close();
+            callback(err);
+          });
+        }
       });
     }
   });
