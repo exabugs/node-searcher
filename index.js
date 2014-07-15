@@ -9,14 +9,14 @@ var MongoClient = require("mongodb").MongoClient
   , frequency = require('./lib/text/frequency')
   ;
 
-function Searcher(db, collection, field, freq) {
+function Searcher(db, collection, freq) {
   if ('string' == typeof db) {
     this.url = url; // 'mongodb://127.0.0.1:27017/test'
   } else {
     this.db = db;
   }
   this.collection = collection;
-  this.field = field; // ['k', 'c', 'v'] , ['key', 'val', 'tfiof'] etc.
+  this.field = ['k', 'c', 'v']; // 
   this.freq = freq; // freq = {'meta.tf': COLL_OF};
   return this;
 }
