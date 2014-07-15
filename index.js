@@ -9,12 +9,13 @@ var MongoClient = require("mongodb").MongoClient
   , frequency = require('./lib/text/frequency')
   ;
 
-function Searcher(db, field, freq) {
+function Searcher(db, collection, field, freq) {
   if ('string' == typeof db) {
     this.url = url; // 'mongodb://127.0.0.1:27017/test'
   } else {
     this.db = db;
   }
+  this.collection = collection;
   this.field = field; // ['k', 'c', 'v'] , ['key', 'val', 'tfiof'] etc.
   this.freq = freq; // freq = {'meta.tf': COLL_OF};
   return this;
@@ -28,6 +29,11 @@ Searcher.prototype.open = function (callback) {
       callback(err, db);
     });
   }
+};
+
+// 引数チェック
+Searcher.prototype.check = function (params) {
+  params.collection = params.collection || this.collection;
 };
 
 /**
@@ -59,6 +65,7 @@ Searcher.prototype.open = function (callback) {
 Searcher.prototype.parse = function (source, callback) {
   var field = this.field;
   var freq = this.freq;
+  this.check(source);
   this.open(function (err, db) {
     if (err) {
       callback(err);
@@ -111,6 +118,8 @@ Searcher.prototype.parse = function (source, callback) {
 Searcher.prototype.indexing = function (target, source, callback) {
   var freq = this.freq;
   var field = this.field;
+  this.check(target);
+  this.check(source);
   this.open(function (err, db) {
     if (err) {
       callback(err);
@@ -163,6 +172,7 @@ Searcher.prototype.indexing = function (target, source, callback) {
 Searcher.prototype.search = function (target, callback) {
   var freq = this.freq;
   var field = this.field;
+  this.check(target);
   this.open(function (err, db) {
     if (err) {
       callback(err);
@@ -191,6 +201,7 @@ Searcher.prototype.search = function (target, callback) {
  */
 Searcher.prototype.mutualize = function (source, callback) {
   var field = this.field;
+  this.check(source);
   this.open(function (err, db) {
     if (err) {
       callback(err);
@@ -227,7 +238,8 @@ Searcher.prototype.mutualize = function (source, callback) {
 
  */
 Searcher.prototype.cmdscale = function (target, source, callback) {
-  var self = this;
+  this.check(target);
+  this.check(source);
   this.open(function (err, db) {
     if (err) {
       callback(err);
