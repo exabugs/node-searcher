@@ -11,7 +11,7 @@ var MongoClient = require("mongodb").MongoClient
 
 function Searcher(db, collection, freq) {
   if ('string' == typeof db) {
-    this.url = url; // 'mongodb://127.0.0.1:27017/test'
+    this.url = db; // 'mongodb://127.0.0.1:27017/test'
   } else {
     this.db = db;
   }
