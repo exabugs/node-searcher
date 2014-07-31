@@ -11,6 +11,34 @@ TF-IDF Searcher for Node.js
 [![NPM](https://nodei.co/npm/node-searcher.png?stars&downloads)](https://nodei.co/npm/node-searcher/) [![NPM](https://nodei.co/npm-dl/node-searcher.png)](https://nodei.co/npm/node-searcher/)
 
 
+TF-IDF というアルゴリズムの、Node/Mongoでの実装になります。
+
+|用語|説明|
+|---|---|
+|TF|Term Frequency (ある単語の、1文書内での出現確率)|
+|DF|Document Frequency (ある単語を含む文書の、文書全体での出現確率)|
+|IDF|Inverse DF (DFの逆数)|
+
+TF は、1文書だけから求めることができる。
+DF は、文書全部を調べる必要がある (→ バッチ処理が必要) 
+
+以下、モジュール (index.js) での関数とのひもづけ
+
+|関数|内容|
+|---|---|
+|parse|TFをもとめる|
+|indexing|DFをもとめる|
+|search|実際の検索処理|
+
+
+
+Usage
+-----
+ 1. 文書を登録した際に、parse を実行する。
+ 2. cron などで indexing を実行する。
+ 3. 検索時は、search を実行する。
+
+ 
 System Requirements
 -----
 
@@ -19,8 +47,7 @@ $
 ```
 
 
-Usage
------
+
 
 Installation command is `npm install node-wakame`.
 
