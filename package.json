@@ -1,6 +1,6 @@
 {
   "name": "node-searcher",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "TF-IDF Searcher",
   "main": "index.js",
   "scripts": {
@@ -28,17 +28,17 @@
   },
   "homepage": "https://github.com/exabugs/node-searcher",
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "should": "~3.3.1",
+    "mocha": "~2.0.1",
+    "should": "~4.1.0",
     "blanket": "~1.1.6",
-    "coveralls": "~2.10.0",
+    "coveralls": "~2.11.2",
     "mocha-lcov-reporter": "~0.0.1"
   },
   "dependencies": {
-    "async": "^0.8.0",
+    "async": "^0.9.0",
     "log": "^1.4.0",
-    "mongodb": "^1.4.2",
+    "mongodb": "^1.4.19",
     "node-wakame": "^1.1.3",
-    "underscore": "^1.6.0"
+    "underscore": "^1.7.0"
   }
 }
